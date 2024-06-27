@@ -32,9 +32,9 @@ texto
 texto
           
                botao para iniciar
-==================================================
+
 cabeçalho
-==================================================
+
 
 2.Página de dicas
 Perspecta                        dicas       sobre
