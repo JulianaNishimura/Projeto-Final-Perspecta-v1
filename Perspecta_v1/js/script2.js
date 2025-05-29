@@ -118,38 +118,31 @@ function setupTempo() {
 }
 
 async function getImages(query, page) {
-  const params = new URLSearchParams({
+  const params = {
     query: query,
     orientation: 'portrait',
     order_by: 'relevant',
     page: page,
-  });
+  };
 
   try {
-    const response = await fetch(
-      `https://api.unsplash.com/search/photos?${params}`,
+    const response = await axios.get(
+      'https://api.unsplash.com/search/photos',
       {
-        method: 'GET',
+        params: params,
         headers: {
-          Authorization:
-            'Client-ID YAn2034xFPyeh6XN-QrdUeR7mdqA7I6D182AOg8umvI',
+          Authorization: 'Client-ID YAn2034xFPyeh6XN-QrdUeR7mdqA7I6D182AOg8umvI',
         },
       }
     );
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-
-    const data = await response.json();
-
-    return data.results.map((item) => ({
+    return response.data.results.map((item) => ({
       url: `${item.urls.raw}&w=950`,
       photographer: item.user.name,
       profile: `${item.user.links.html}?utm_source=your_app_name&utm_medium=referral`,
     }));
   } catch (error) {
-    console.error('Error fetching images:', error);
+    console.error('Erro ao buscar imagens com Axios:', error);
     return [];
   }
 }
