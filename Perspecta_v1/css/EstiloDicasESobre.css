@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  display: block;
+}
+
+.conteudo_sobre_e_dicas {
+  display: flex;
+  flex-direction: column;
+  margin: 2% 10%;
+}
+
+.items_conteudo_sobre_dicas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: linear-gradient(180deg, #f8f5f0 0%, #f4e0ea 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.secao_importante_sobre_dicas {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px 0;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  animation: fadeIn 0.5s ease-in;
+}
+
+.título_principal_sobre_dicas {
+  font: 700 36px/1.2 "Inter", Helvetica, Arial, serif;
+  color: #2a2a2a;
+  letter-spacing: -0.8px;
+  margin-bottom: 16px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.texto_sobre_dicas {
+  font: 400 18px/1.6 "Inter", Helvetica, Arial, serif;
+  color: #2a2a2a;
+  margin: 16px 0 0;
+  text-align: justify;
+}
+
+.imagemsobre {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid #df87ab;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin: 20px auto;
+  display: block;
+}
+
+.imagemsobre:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.imagens {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  margin: 20px auto;
+  display: block;
+}
+
+.lista_dicas {
+  text-align: left;
+  margin: 20px 0;
+}
+
+.items_lista_dicas {
+  padding: 15px 0;
+  font: 500 16px/1.5 "Inter", Helvetica, Arial, serif;
+  color: #2a2a2a;
+  position: relative;
+  padding-left: 30px;
+  transition: background 0.3s;
+}
+
+.items_lista_dicas:before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #df87ab;
+  font-size: 18px;
+}
+
+.items_lista_dicas:hover {
+  background: #f4e0ea;
+  border-radius: 4px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 650px) {
+  .items_conteudo_sobre_dicas {
+    padding: 20px 10px;
+    border-radius: 8px;
+  }
+
+  .secao_importante_sobre_dicas {
+    padding: 15px;
+    margin: 10px 0;
+  }
+
+  .título_principal_sobre_dicas {
+    font-size: 28px;
+    letter-spacing: -0.6px;
+  }
+
+  .texto_sobre_dicas {
+    font-size: 16px;
+    margin: 12px 0 0;
+  }
+
+  .imagemsobre {
+    max-width: 400px;
+    padding: 10px;
+    margin: 10px auto;
+  }
+
+  .imagemdica1 {
+    max-width: 600px;
+  }
+
+  .imagemdica2 {
+    max-width: 300px;
+  }
+
+  .items_lista_dicas {
+    font-size: 14px;
+    padding: 10px 0 10px 25px;
+  }
+
+  .items_lista_dicas:before {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 450px) {
+  .items_conteudo_sobre_dicas {
+    padding: 15px 8px;
+    border-radius: 6px;
+  }
+
+  .secao_importante_sobre_dicas {
+    padding: 10px;
+    margin: 8px 0;
+  }
+
+  .título_principal_sobre_dicas {
+    font-size: 24px;
+    letter-spacing: -0.5px;
+  }
+
+  .texto_sobre_dicas {
+    font-size: 14px;
+    margin: 10px 0 0;
+  }
+
+  .imagemsobre {
+    max-width: 300px;
+    padding: 8px;
+    margin: 8px auto;
+  }
+
+  .imagemdica1 {
+    max-width: 500px;
+  }
+
+  .imagemdica2 {
+    max-width: 250px;
+  }
+
+  .lista_dicas {
+    margin: 10px 0;
+  }
+
+  .items_lista_dicas {
+    font-size: 13px;
+    padding: 8px 0 8px 20px;
+  }
+
+  .items_lista_dicas:before {
+    font-size: 14px;
+  }
+}

@@ -5,29 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perspecta</title>
-
-    <link rel="stylesheet" type="text/css" href="/css/Est.tamanho.css">
-    <link rel="stylesheet" type="text/css" href="/css/Estilo.css">
+    <link rel="stylesheet" type="text/css" href="css/Estilo.css">
 </head>
 
-<body class="corpo">
-    <main class="main">
-
-        <section class="cabecalho">
-            <div class="cabecalho_caixa">
-                <div class="cabecalho_conteudo">
-                    <a class="logobotao" href="Index.html"><img class="Logo" src="media/logoimagem.png" alt="logonome"></a>
-                    <div class="menu">
-                        <button onclick="window.location.href='dicas.html'" class="navegacao">Dicas</button>
-                        <button onclick="window.location.href='sobreosite.html'" class="navegacao">Sobre</button>
-                    </div>
-                </div>
+<body>
+    <header class="cabecalho">
+        <div class="cabecalho_conteudo">
+            <a href="Index.html">
+                <img id="Logo" src="media/logoimagem.png" alt="logonome">
+            </a>
+            <div class="menu">
+                <button id="botao-dicas" onclick="window.location.href='pages/dicas.html'" class="navegacao">Dicas</button>
+                <button id="botao-sobre" onclick="window.location.href='pages/sobreosite.html'" class="navegacao">Sobre</button>
             </div>
-        </section>
+        </div>
+    </header>
 
+    <main>
         <section class="conteudo">
-            <div class="items_conteudo">
-
                 <div class="secao_importante">
                     <h1 class="título_principal">Melhore suas técnicas de desenho!</h1>
                     <h2 class="subtitulo">Ajudaremos você a melhorar sua própria percepção nas Artes com o método de observação!</h2>
@@ -35,18 +30,16 @@
                         Ao iniciar seu treino, você escolherá o tempo de tela de cada foto e sua categoria, lembrando que a sessão possui 10 fotos por padrão. Lembre-se de estar com o material preparado e em um ambiente em que poderá focar. Bom Treino!<br/><br/>
                         <p id="recomendacao">Recomendamos que caso seja iniciante, confira a aba de DICAS primeiro.</p>
                     </h3>
-                    <button onclick="window.location.href='escolhatempocategoria.html'" class="botao_iniciar">Clique para começar!</button>
+                    <button onclick="window.location.href='pages/escolhatempocategoria.html'" class="botao_iniciar">Clique para começar!</button>
                 </div>
 
                 <div class="grupo_imagens">
                     <div class="imagem2posicao">
-                        <img class="imagem1" src="/media/imagem1.png" alt="primeiraimagem">
-                        <img class="imagem2" src="/media/imagem2.png" alt="segundaimagem">
+                        <img class="imagem1" src="media/imagem1.png" alt="primeiraimagem">
+                        <img class="imagem2" src="media/imagem2.png" alt="segundaimagem">
                     </div>
-                    <img class="imagem3" src="/media/imagem3.png" alt="terceiraimagem">
+                    <img class="imagem3" src="media/imagem3.png" alt="terceiraimagem">
                 </div>
-
-            </div>
         </section>
 
         <footer class="rodape">
