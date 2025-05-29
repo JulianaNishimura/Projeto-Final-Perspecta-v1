@@ -169,11 +169,30 @@ function updateImage() {
 }
 
 function Redirect() {
-  if (confirm('Quer continuar com mais uma sessão?')) {
-    window.location.href = `sessões.html?page=${IntRandomico(100)}`;
-  } else {
-    window.location.href = 'index.html';
-  }
+  Swal.fire({
+    title: 'Deseja iniciar outra sessão?',
+    text: 'Você pode escolher uma nova imagem ou encerrar por aqui.',
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonText: 'Sim, continuar!',
+    cancelButtonText: 'Não, voltar ao início',
+    reverseButtons: true,
+    background: '#fff0f6',
+    color: '#370519',
+    confirmButtonColor: '#df87ab',
+    cancelButtonColor: '#ffc4de',
+    customClass: {
+      popup: 'rounded-xl',
+      confirmButton: 'custom-confirm-btn',
+      cancelButton: 'custom-cancel-btn',
+    },
+  }).then((result) => {
+    if (result.isConfirmed) {
+      window.location.href = `sessões.html?page=${IntRandomico(100)}`;
+    } else {
+      window.location.href = '../index.html';
+    }
+  });
 }
 
 // Inicialização
