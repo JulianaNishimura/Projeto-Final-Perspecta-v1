@@ -118,34 +118,24 @@ function setupTempo() {
 }
 
 async function getImages(query, page) {
-  const params = {
-    query: query,
-    orientation: 'portrait',
-    order_by: 'relevant',
-    page: page,
-  };
-
   try {
-    const response = await axios.get(
-      'https://api.unsplash.com/search/photos',
-      {
-        params: params,
-        headers: {
-          Authorization: 'Client-ID YAn2034xFPyeh6XN-QrdUeR7mdqA7I6D182AOg8umvI',
-        },
-      }
-    );
+    const response = await axios.get('https://unsplash-proxy-4d3b.onrender.com/fotos', {
+      params: { query, page },
+    });
 
+    // A estrutura da resposta do proxy é igual da Unsplash? 
+    // Se sim, mantém:
     return response.data.results.map((item) => ({
       url: `${item.urls.raw}&w=950`,
       photographer: item.user.name,
       profile: `${item.user.links.html}?utm_source=your_app_name&utm_medium=referral`,
     }));
   } catch (error) {
-    console.error('Erro ao buscar imagens com Axios:', error);
+    console.error('Erro ao buscar imagens via proxy:', error);
     return [];
   }
 }
+
 
 function updateImage() {
   if (listaimg.length === 0) {
